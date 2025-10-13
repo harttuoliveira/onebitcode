@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-image: url(viagens-possiveis.jpg);
+  background-size: cover;
+}
+
+header {
+  background-color: #248030;
+  color: #eaeaea;
+  padding: 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+main {
+  padding: 10px;
+  background-color: #ffff8c;
+  margin: 10px 20px;
+  border-radius: 5px;
+}
+
+a {
+  color: #248030;
+}
+
+footer {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin: 10px 20px;
+  border-radius: 5px;
+}
+
+#ienviar {
+  background-color: #248030;
+  color: #fff;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 30px 0px 30px 0px; ;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  background-color: #1C1A1D;
+  border: 4px solid transparent;
+  border-radius: 4px;
+  color: #FFFFFF;
+  padding: 30px;
+  margin: 30px;
+  width: 320px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #2D2D2C;
+  border: 4px solid #0087D8;
+}
+
+.hidden {
+  display: none;
+}
+

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Lora&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+header {
+  border-bottom: 1px solid #030308;
+  padding: 2rem 0;
+}
+
+h1 {
+  font-size: 3.0rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1.875rem 0 0.625rem 0;
+}
+
+h1, h2 {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+}
+
+p, a {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1rem;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin: 1.563rem 0.625rem;
+}
+
+a {
+  font-family: 'Fira Sans', sans-serif;
+  text-decoration: none;
+  background-color: #43ABF6;
+  color: #fff;
+  border-radius: 999px;
+  padding: 1rem 1.5rem;
+}
+
+p {
+  margin: 1.25rem 0;
+}
+
+header p {
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+}
+
+footer {
+  background-color: #030308;
+  color: #fff;
+  padding: 0.625rem;
+  margin-top: 2.5rem;
+}
+
+.sign {
+  display: block;
+  background-color: #030308;
+  width: fit-content;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.veja {
+  background-color: #030308;
+  text-transform: uppercase;
+}

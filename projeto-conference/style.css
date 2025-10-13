@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+:root {
+  --fundo-branco:  #ffffff;
+  --fundo-claro:   #e0e0e0;
+  --cor-principal: #6c63ff;
+  --fundo-escuro:  #2c2c2e;
+  --fundo-preto:   #070707;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fundo-claro);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  /* (opcional, mas seguro) evita qualquer rolamento horizontal residual */
+  overflow-x: hidden; /* ← adicionado */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  /* reescrita do background para clareza, mesmo efeito visual */
+  background:
+    linear-gradient(to bottom right,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url(img/pexels-bertellifotografia-3321797.jpg) no-repeat center center/cover;
+  /* object-fit: cover;  ← removido (não faz efeito em <header>) */
+  color: var(--fundo-branco);
+  /* corrige 100vh em mobile */
+  min-height: 100vh;  /* fallback */
+  min-height: 100svh; /* iOS UI mínima */
+  min-height: 100dvh; /* viewport dinâmica */
+  text-align: center;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 3rem 0;
+}
+
+a {
+  display: inline-block;
+  background-color: var(--cor-principal);
+  color: var(--fundo-branco);
+  text-decoration: none;
+  padding: .75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+a:hover {
+  background-color: #574fd6;
+}
+
+.speakers-grid div, .sessions-grid div {
+  background-color: var(--fundo-branco);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+input {
+  /* ↓ evita overflow no mobile (era 90% + margens laterais fixas) */
+  width: 90%;         /* ← alterado */
+  max-width: 28rem;    /* opcional: limite confortável */
+  display: block;      /* garante linha inteira */
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0.8rem;
+  margin: 0.75rem auto; /* ← alterado (remove margens 2rem laterais) */
+  font-size: 1rem;
+}
+
+.speaker {
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.speakers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.speakers-grid div {
+  background-color: var(--fundo-branco);
+}
+
+/* antes: .speakers img, h3, p  (vazava p/ o site todo) */
+.speakers img,
+.speakers h3,
+.speakers p {
+  margin-bottom: 1rem; /* ← corrigido escopo */
+}
+
+.sessions-grid div {
+  display: grid;
+  text-align: left;
+  padding-top: 0.5rem;
+}
+
+.sessions h3 {
+  margin-top: 0.5rem;
+}
+
+.subscribe img {
+  padding: 2rem 2rem 0 2rem;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.subscribe h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.subscribe p {
+  color: #808080;
+}
+
+footer p {
+  margin: 3rem 1rem 0rem 1rem;
+}
+
+footer a {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .sessions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .newsletter-text {
+    text-align: left;
+  }
+
+  .subscribe img {
+    grid-area: img;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  header,
+  .speakers,
+  .sessions,
+  .subscribe {
+    padding: 4rem;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--fundo-escuro);
+    color: var(--fundo-branco);
+  }
+
+  .speakers-grid div {
+    background-color: var(--fundo-preto);
+  }
+
+  .sessions-grid div {
+    background-color: var(--fundo-preto);
+  }
+
+  input {
+    color: var(--fundo-branco);
+    background-color: var(--fundo-preto);
+  }
+}

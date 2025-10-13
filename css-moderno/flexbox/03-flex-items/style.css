@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+
+body {
+  background-color: #2c2c2d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex-grow: 1; /* Permite crescer */
+  flex-shrink: 1; /* Permite encolher */
+  flex-basis: 10rem; 
+  flex: 0 1 10rem; /* Atalho para as propriedades flex */
+}
+
+.box.red {
+  flex-shrink: 0;
+  flex-basis: 5rem;
+}
+
+.box.yellow {
+  /*flex-grow: 0; /* Valor padrão */
+  /*flex-shrink: 1; /* Valor padrão */
+}
+
+.box.blue {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* Estilos auxiliares */
+
+.box {
+  background-color: #4547c7;
+  border: 2px solid #272727;
+  min-height: 10rem;
+  min-width: 10rem;
+}
+
+/* Estilos auxiliares */
+
+.box {
+  background-color: #4547c7;
+  border: 2px solid #272727;
+}
+
+.box.red {
+  background-color: #ff665c;
+}
+
+.box.yellow {
+  background-color: #f9ff58;
+  height: 15rem;
+}
+
+.box.blue {
+  background-color: #5255eb;
+}

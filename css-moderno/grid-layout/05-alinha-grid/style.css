@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+body {
+  background-color: #2d2d2c;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif; 
+
+  display: grid;
+  /* justify-content: center;
+  align-content: center; */
+  place-content: start center;
+  min-height: 100vh;
+}
+
+.grid-container {
+  background-color: #1c1a1d;
+  padding: 1rem;
+  height: 28rem;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 8rem 8rem;
+  grid-template-rows: 8rem 8rem;
+
+  align-content: center;
+  align-items: center;
+
+  justify-content: center;
+  justify-items: center;
+}
+
+.grid-item {
+  background-color: #4c7caf;
+  padding: 1rem;
+}
+
